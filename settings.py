@@ -175,12 +175,18 @@ LOGGING = {
     }
 }
 
-LOGIN_REDIRECT_URL = '/dashboard/' #default: '/accounts/profile/'
+LOGIN_REDIRECT_URL = '/chat/' #default: '/accounts/profile/'
+
+# base app settings
+
+#WEBCHAT_URL = 'http://localhost:9090/'
+
 
 # django-cas-consumer settings
 CAS_BASE = 'http://mxh.scripts.mit.edu/mitauth/'
 CAS_COMPLETELY_LOGOUT = False #don't notify CAS provider of logout
 CAS_EMAIL_CALLBACK = lambda username: '%s@mit.edu' % username
+
 
 
 #Import any local settings (ie. production environment) that will override
