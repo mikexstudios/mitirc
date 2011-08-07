@@ -2,6 +2,9 @@ env/
 local_settings.py
 development.db
 
+#For sass
+.sass-cache/
+
 #vim.gitignore
 .*.sw[a-z]
 *.un~
