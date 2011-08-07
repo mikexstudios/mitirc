@@ -132,6 +132,18 @@ INSTALLED_APPS = (
     'base',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.request', #for request object
+    'django.contrib.messages.context_processors.messages',
+    #Above are the default template context processors
+    #'yourapp.context_processors.sitename',
+)
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error.
