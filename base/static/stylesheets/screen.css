@@ -577,7 +577,7 @@ body#home #content .right {
   float: left;
   margin-right: 0;
   width: 395px;
-  margin-top: 0.3em;
+  margin-top: 0.7em;
 }
 /* line 138, ../../../../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body#home #content .right {
@@ -586,6 +586,7 @@ body#home #content .right {
 /* line 87, ../src/screen.sass */
 body#home #content .right h3 {
   margin-left: 0.65em;
+  margin-bottom: 0.8em;
 }
 /* line 90, ../src/screen.sass */
 body#home #content .right a.login {
@@ -593,7 +594,7 @@ body#home #content .right a.login {
 }
 /* line 93, ../src/screen.sass */
 body#home #content .right #info {
-  margin-top: 1.7em;
+  margin-top: 1.4em;
 }
 /* line 95, ../src/screen.sass */
 body#home #content .right #info h4 {
