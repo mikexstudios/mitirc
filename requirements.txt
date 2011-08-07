@@ -21,7 +21,7 @@ django-annoying
 #South
 
 #For interacting with a CAS provider for single sign ons with MIT certs.
--e git://github.com/Nitron/django-cas-consumer.git#egg=django-cas-consumer
+-e git://github.com/mikexstudios/django-cas-consumer.git#egg=django-cas-consumer
 
 #For handling registration, activation, and password stuff
 #-e hg+http://bitbucket.org/ubernostrum/django-registration#egg=django_registration

@@ -129,6 +129,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 
+    'cas_consumer', #for SSO signins with MIT certs
+
     'base',
 )
 
@@ -142,6 +144,12 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
     #Above are the default template context processors
     #'yourapp.context_processors.sitename',
+)
+
+AUTHENTICATION_BACKENDS = (
+    #'django_rpx_plus.backends.RpxBackend', 
+    'cas_consumer.backends.CASBackend',
+    'django.contrib.auth.backends.ModelBackend', #default django auth
 )
 
 # A sample logging configuration. The only tangible logging
@@ -166,6 +174,14 @@ LOGGING = {
         },
     }
 }
+
+LOGIN_REDIRECT_URL = '/dashboard/' #default: '/accounts/profile/'
+
+# django-cas-consumer settings
+CAS_BASE = 'http://mxh.scripts.mit.edu/mitauth/'
+CAS_COMPLETELY_LOGOUT = False #don't notify CAS provider of logout
+CAS_EMAIL_CALLBACK = lambda username: '%s@mit.edu' % username
+
 
 #Import any local settings (ie. production environment) that will override
 #these development environment settings.

@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'mitirc.views.home', name='home'),
     # url(r'^mitirc/', include('mitirc.foo.urls')),
     url(r'^', include('base.urls')),
+    url(r'^accounts/', include('cas_consumer.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
