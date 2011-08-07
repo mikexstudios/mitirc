@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'mitirc.views.home', name='home'),
     # url(r'^mitirc/', include('mitirc.foo.urls')),
+    url(r'^', include('base.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
