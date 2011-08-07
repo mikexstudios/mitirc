@@ -1,3 +1,5 @@
+@import compass
+
 // This import applies a global reset to any page that imports this stylesheet.
 @import blueprint/reset
 // To configure blueprint, edit the partials/base.sass file.
@@ -14,7 +16,7 @@
 // But Compass recommends that you scope your blueprint styles
 // So that you can better control what pages use blueprint
 // when stylesheets are concatenated together.
-+blueprint-scaffolding("body.bp")
+//+blueprint-scaffolding("body.bp")
 body.bp
   +blueprint-typography(true)
   +blueprint-utilities
@@ -42,4 +44,62 @@ body.two-col
     // true means it's the last column in the row
     +column($content-columns, true)
 
+body
+  #container
+    +container
+    //+showgrid
+  #header
+    margin-top: 1em
+  #header, #footer
+    +column($blueprint-grid-columns)
+
+  a.button
+    +hover-link
+    color: #333
+    &:visited
+      color: #333
+    &:hover
+      text-decoration: none
+      color: #fff
+      text-shadow: none
+
+
+
+body#home
+  #header
+    text-align: center
+    h1
+      font-size: 1.8em
+      a
+        +hover-link
+    .tagline
+      font-size: 2.9em
+      margin-bottom: 0.3em
+    .description
+      font-size: 1.2em
+  #content
+    .left
+      +column($blueprint-grid-columns / 2)
+    .right
+      +column($blueprint-grid-columns / 2, true)
+      //Need some space to bring text down to match screenshot
+      margin-top: 0.3em
+      h3
+        margin-left: 0.65em
+        //margin-bottom: 0.8em
+      a.login
+        font-size: 1.2em
+
+      #info
+        margin-top: 1.7em
+        h4
+          font-size: 0.8em
+          font-weight: bold
+          margin-bottom: 0.4em
+        p
+          font-size: 0.8em
+
+      
+
+      
 

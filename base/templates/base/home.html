@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block bodyid %}home{% endblock %}
+{% block bodyclass %}bp{% endblock %}
 
 {% block title %}Chat with the MIT community!{% endblock %}
 
@@ -7,11 +8,28 @@
 <h1><a href="{% url home %}" class="logo">MIT IRC</a></h1>
 
 <h2 class="tagline">chat with the MIT community</h2>
-<p class="description">MIT IRC is a simple and realtime chat service hosted by
-SIPB</p>
+<p class="description">a simple and realtime chat service hosted by SIPB</p>
 {% endblock %}
 
 {% block content %}
+<div class="left">
+  <img src="{{ STATIC_URL }}images/screenshot01s.png" />
+</div>
+<div class="right">
+  <h3>Get started in just one step:</h3>
+  <a href="" class="login button primary big">Login using MIT certificates &raquo;</a>
+
+  <div id="info">
+    <h4>Don't have certificates or an MIT Athena account?</h4>
+    <p>We are currently working on alternate registration and login methods. At
+    the moment, chat is only available for current athena account holders, but we
+    plan to open it to more users soon.</p>
+
+    <h4>Want to use your own IRC client?</h4>
+    <p>Yes, you can! However, you need to still login first to register your nickname
+    and receive your unique server password.</p>
+  </div>
+</div>
 {% endblock %}
 
 {% block footer %}{% endblock %}
