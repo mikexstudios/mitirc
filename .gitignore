@@ -2,6 +2,11 @@ env/
 local_settings.py
 development.db
 
+#vim.gitignore
+.*.sw[a-z]
+*.un~
+Session.vim
+
 
 #OSX.gitignore
 .DS_Store
