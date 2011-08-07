@@ -494,42 +494,42 @@ body.two-col #content {
 }
 
 /* line 48, ../src/screen.sass */
-body #container {
+body.base #container {
   width: 800px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
 /* line 51, ../src/screen.sass */
-body #header {
+body.base #header {
   margin-top: 1em;
 }
 /* line 53, ../src/screen.sass */
-body #header, body #footer {
+body.base #header, body.base #footer {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 800px;
 }
 /* line 138, ../../../../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body #header, * html body #footer {
+* html body.base #header, * html body.base #footer {
   overflow-x: hidden;
 }
 /* line 56, ../src/screen.sass */
-body a.button {
+body.base a.button {
   text-decoration: none;
   color: #333333;
 }
 /* line 4, ../../../../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_hover-link.scss */
-body a.button:hover {
+body.base a.button:hover {
   text-decoration: underline;
 }
 /* line 59, ../src/screen.sass */
-body a.button:visited {
+body.base a.button:visited {
   color: #333333;
 }
 /* line 61, ../src/screen.sass */
-body a.button:hover {
+body.base a.button:hover {
   text-decoration: none;
   color: white;
   text-shadow: none;
