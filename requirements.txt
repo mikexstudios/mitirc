@@ -39,6 +39,9 @@ celery
 #For using Django's ORM as a ghetto queue.
 django-kombu
 
+#python IRC library
+python-irclib
+
 #To make email field 254 char.
 #django_auth_longer_email
 
