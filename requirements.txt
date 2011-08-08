@@ -33,9 +33,10 @@ django-annoying
 #-e git://github.com/mikexstudios/django-rpx-plus.git#egg=django_rpx_plus
 
 #Messaging/work queue (depends on amqplib, anyjson, billiard, carrot, importlib,
-#and python-dateutil).
-django-celery
-celery
+#and python-dateutil). We need version 2.2.7 since latest version has bug in 
+#table creation.
+django-celery == 2.2.7
+celery == 2.2.7
 #For using Django's ORM as a ghetto queue.
 django-kombu
 
