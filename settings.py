@@ -186,6 +186,10 @@ LOGIN_REDIRECT_URL = '/chat/' #default: '/accounts/profile/'
 #WEBCHAT_URL = 'http://localhost:9090/'
 DEFAULT_ROOM = '#general'
 
+IRC_SERVER = 'yourserver'
+IRC_SERVER_PORT = 6667
+IRC_TASK_NICKNAME = 'guest-task'
+
 
 ##############################
 # django-cas-consumer settings
@@ -207,6 +211,7 @@ CELERY_RESULT_BACKEND = 'database' #default = database
 CELERY_RESULT_DBURI = 'sqlite://celerydb.sqlite'
 
 BROKER_BACKEND = 'djkombu.transport.DatabaseTransport'
+#BROKER_TRANSPORT = 'djkombu.transport.DatabaseTransport'
 #BROKER_HOST = 'localhost'
 #BROKER_PORT = 5672
 #BROKER_USER = 'dev'
