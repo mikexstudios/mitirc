@@ -1,0 +1,3 @@
+# base app settings
+
+WEBCHAT_URL = 'http://someserver:9090/'
