@@ -180,6 +180,7 @@ LOGIN_REDIRECT_URL = '/chat/' #default: '/accounts/profile/'
 # base app settings
 
 #WEBCHAT_URL = 'http://localhost:9090/'
+DEFAULT_ROOM = '#general'
 
 
 # django-cas-consumer settings
