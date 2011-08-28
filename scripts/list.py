@@ -1,13 +1,5 @@
 #Scaffolding to setup standalone django script
 import os, sys
-
-# Path of this "site" (no trailing /):
-#THIS_ROOT = os.path.dirname(os.path.realpath(__file__))
-#sys.path.append(os.path.join(THIS_ROOT, '../../'))
-#sys.path.append(os.path.join(THIS_ROOT, '../'))
-#os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
-#from django.conf import settings
-
 sys.path[0] = os.path.normpath(os.path.join(sys.path[0], '..'))
 from django.core.management import setup_environ
 import settings
