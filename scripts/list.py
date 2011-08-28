@@ -38,6 +38,10 @@ def on_list(connection, event):
     #ex. ['#general', '3', '[+nt] Chat about anything!']
     name, num_users, topic = event.arguments()
 
+    #Remove the [+nt], etc. mode part from the topic
+    topic = topic.split(']', 1)[1] #we split only once at the first ]
+    topic = topic.strip()
+
     room = models.Room()
     room.name = name #this is the primary key
     room.num_users = num_users
