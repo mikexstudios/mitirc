@@ -21,7 +21,9 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'development.db',                      # Or path to database file if using sqlite3.
+        #We rigorously set the path to the sqlite3 db since standalone scripts will
+        #have the CWD different than when run with manage.py
+        'NAME': os.path.join(SITE_ROOT, 'development.db'), # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -189,6 +191,10 @@ DEFAULT_ROOM = '#general'
 IRC_SERVER = 'yourserver'
 IRC_SERVER_PORT = 6667
 IRC_TASK_NICKNAME = 'guest-task'
+
+#How often should the list of IRC rooms be updated in the dashboard? (specify value
+#in seconds; default is 1 minute)
+UPDATE_ROOMS_INTERVAL = 60 #sec
 
 
 ##############################
