@@ -35,10 +35,10 @@ django-annoying
 #Messaging/work queue (depends on amqplib, anyjson, billiard, carrot, importlib,
 #and python-dateutil). We need version 2.2.7 since latest version has bug in 
 #table creation.
-django-celery == 2.2.7
-celery == 2.2.7
+#django-celery == 2.2.7
+#celery == 2.2.7
 #For using Django's ORM as a ghetto queue.
-django-kombu
+#django-kombu
 
 #python IRC library
 python-irclib

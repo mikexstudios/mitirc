@@ -131,8 +131,9 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 
-    'djcelery', #messaging queue
-    'djkombu', #for using orm as ghetto queue
+    #'djcelery', #messaging queue
+    #'djkombu', #for using orm as ghetto queue
+
     'cas_consumer', #for SSO signins with MIT certs
 
     'base',
@@ -208,30 +209,30 @@ CAS_EMAIL_CALLBACK = lambda username: '%s@mit.edu' % username
 ###################
 # djcelery settings 
 ###################
-import djcelery
-djcelery.setup_loader()
-
-#Result store settings.
-CELERY_RESULT_BACKEND = 'database' #default = database
-#CELERY_RESULT_DBURI = 'mysql://%s:%s@%s/%s' % ()
-CELERY_RESULT_DBURI = 'sqlite://celerydb.sqlite'
-
-BROKER_BACKEND = 'djkombu.transport.DatabaseTransport'
-#BROKER_TRANSPORT = 'djkombu.transport.DatabaseTransport'
-#BROKER_HOST = 'localhost'
-#BROKER_PORT = 5672
-#BROKER_USER = 'dev'
-#BROKER_PASSWORD = 'testtest'
-#BROKER_VHOST = 'mXs-MBP'
-
-#If True, tasks are executed locally and never sent to queue.
-#CELERY_ALWAYS_EAGER = True
-#CELERYD_LOG_LEVEL = 'INFO'
-
-#CELERYD_CONCURRENCY = '2' #default = number of CPU
-
-#List of modules to import when celery starts.
-CELERY_IMPORTS = ('base.tasks', )
+#import djcelery
+#djcelery.setup_loader()
+#
+##Result store settings.
+#CELERY_RESULT_BACKEND = 'database' #default = database
+##CELERY_RESULT_DBURI = 'mysql://%s:%s@%s/%s' % ()
+#CELERY_RESULT_DBURI = 'sqlite://celerydb.sqlite'
+#
+#BROKER_BACKEND = 'djkombu.transport.DatabaseTransport'
+##BROKER_TRANSPORT = 'djkombu.transport.DatabaseTransport'
+##BROKER_HOST = 'localhost'
+##BROKER_PORT = 5672
+##BROKER_USER = 'dev'
+##BROKER_PASSWORD = 'testtest'
+##BROKER_VHOST = 'mXs-MBP'
+#
+##If True, tasks are executed locally and never sent to queue.
+##CELERY_ALWAYS_EAGER = True
+##CELERYD_LOG_LEVEL = 'INFO'
+#
+##CELERYD_CONCURRENCY = '2' #default = number of CPU
+#
+##List of modules to import when celery starts.
+#CELERY_IMPORTS = ('base.tasks', )
 
 
 
