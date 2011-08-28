@@ -23,5 +23,26 @@ class IRCAuth(models.Model):
                                 string.digits, 8)) #match password model length!
 
 
+class Room(models.Model):
+    '''
+    Describes an IRC room.
+    '''
+    #We set the room name as the primary key so we do not have an integer auto-
+    #increment field. The currently set maximum length of room names is 65 for
+    #InspIRCd. The standard states a maximum length of 50 chars.
+    #NOTE: primary_key=True implies null=False and unique=True. 
+    name = models.CharField(max_length = 65, primary_key = True)
+    num_users = models.PositiveIntegerField(default = 0)
+    #The maximum topic length varies by IRCd, but InspIRCd has maximum length
+    #of 308. 
+    topic = models.CharField(max_length = 310, default = '', blank = True)
+    #We use the updated field to filter out old rooms that are probably empty
+    #(since they haven't been updated by the room listing bot).
+    updated = models.DateTimeField(auto_now = True)
+
+    def __unicode__(self):
+        return '%s %s %s' % (self.name, self.num_users, self.topic)
+
+
 # We handle signals in handlers.py. Make sure they are registered by importing:
 import handlers
