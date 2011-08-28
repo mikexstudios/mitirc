@@ -11,3 +11,8 @@ class RoomAdmin(admin.ModelAdmin):
     list_display = ('name', 'num_users', 'topic', 'updated')
     list_display_links = ('name', )
 admin.site.register(models.Room, RoomAdmin)
+
+class StatisticAdmin(admin.ModelAdmin):
+    list_display = ('key', 'value', )
+    list_display_links = ('key', )
+admin.site.register(models.Statistic, StatisticAdmin)

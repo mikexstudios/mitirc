@@ -44,5 +44,17 @@ class Room(models.Model):
         return '%s %s %s' % (self.name, self.num_users, self.topic)
 
 
+class Statistic(models.Model):
+    '''
+    Keeps track of IRC statistics (like number of users, number of channels).
+    Simply a key-value store for now.
+    NOTE: This is a pretty crude way of storing stats. Got a better idea?
+    '''
+    key = models.CharField(max_length = 50, primary_key = True)
+    value = models.PositiveIntegerField(default = 0)
+
+    def __unicode__(self):
+        return '%s: %s' % (self.key, self.value)
+
 # We handle signals in handlers.py. Make sure they are registered by importing:
 import handlers
