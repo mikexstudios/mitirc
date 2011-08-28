@@ -195,7 +195,7 @@ IRC_TASK_NICKNAME = 'guest-task'
 
 #How often should the list of IRC rooms be updated in the dashboard? (specify value
 #in seconds; default is 1 minute)
-UPDATE_ROOMS_INTERVAL = 60 #sec
+IRC_UPDATE_INTERVAL = 60 #sec
 
 
 ##############################
