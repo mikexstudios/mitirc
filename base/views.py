@@ -22,9 +22,11 @@ def home(request):
 @login_required
 @render_to('base/dashboard.html')
 def dashboard(request):
-    rooms = models.Room.objects.all().order_by('-num_users')    
+    rooms = models.Room.objects.all().order_by('-num_users')
+    total_users = models.Statistic.objects.get(key = 'total_users').value
+    max_users = models.Statistic.objects.get(key = 'max_users').value
 
-    return {'rooms': rooms}
+    return {'rooms': rooms, 'total_users': total_users, 'max_users': max_users}
 
 
 @login_required

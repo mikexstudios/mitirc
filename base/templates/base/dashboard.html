@@ -6,9 +6,9 @@
 {% block content %}
 <div class="left">
   <div id="users">
-    <h2 class="num_users">132</h2>
-    <h3>users online</h3>
-    <p class="highest">highest: 453</p>
+    <h2 class="num_users">{{ total_users }}</h2>
+    <h3>user{{ total_users|pluralize }} online</h3>
+    <p class="highest">highest: {{ max_users }}</p>
   </div>
 </div>
 
