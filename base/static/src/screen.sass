@@ -67,6 +67,7 @@ body.base
 body#dashboard
   #header
     border-bottom: 3px double #ccc
+    margin-bottom: 1em
     h1
       +column(5)
       font-size: 1.6em
@@ -85,6 +86,36 @@ body#dashboard
           +hover-link
           color: $font-color
 
+  #content
+    .left
+      +column($blueprint-grid-columns * 1/4)
+    .right
+      +column($blueprint-grid-columns * 3/4, true)
+
+    #users
+      border: 1px solid #ccc
+      background-color: #eee
+      +border-radius(5px)
+      text-align: center
+      padding-top: 0.2em
+      padding-bottom: 0.6em
+
+      h2, h3
+        margin: 0
+        padding: 0
+        line-height: 1
+        margin-bottom: 0.3em
+      h2.num_users
+        font-weight: bold
+        color: #333
+        +single-text-shadow(#000, -1px, -1px)
+      h3
+        font-size: 1.1em
+        //font-family: $blueprint-sansserif-font-family
+      p
+        margin: 0
+        font-size: 0.7em
+        font-style: italic
 
 
 
