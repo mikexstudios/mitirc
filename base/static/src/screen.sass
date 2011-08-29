@@ -90,7 +90,9 @@ body#dashboard
     .left
       +column($blueprint-grid-columns * 1/4)
     .right
-      +column($blueprint-grid-columns * 3/4, true)
+      //Add left margin using prepend.
+      +prepend(1) 
+      +column($blueprint-grid-columns * 3/4 - 1, true)
 
     #users
       border: 1px solid #ccc
@@ -116,6 +118,18 @@ body#dashboard
         margin: 0
         font-size: 0.7em
         font-style: italic
+
+    #rooms
+      h3.title
+        font-size: 1.7em
+        margin: 0
+        margin-bottom: 0.2em
+        margin-right: 0.5em
+        float: left
+      p.description
+        font-size: 0.7em
+        padding-top: 0.9em
+
 
 
 

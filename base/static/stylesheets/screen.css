@@ -611,16 +611,17 @@ body#dashboard #content .left {
 }
 /* line 92, ../src/screen.sass */
 body#dashboard #content .right {
+  padding-left: 33.75px;
   display: inline;
   float: left;
   margin-right: 0;
-  width: 597.5px;
+  width: 563.75px;
 }
 /* line 147, ../../../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body#dashboard #content .right {
   overflow-x: hidden;
 }
-/* line 95, ../src/screen.sass */
+/* line 97, ../src/screen.sass */
 body#dashboard #content #users {
   border: 1px solid #cccccc;
   background-color: #eeeeee;
@@ -634,39 +635,52 @@ body#dashboard #content #users {
   padding-top: 0.2em;
   padding-bottom: 0.6em;
 }
-/* line 103, ../src/screen.sass */
+/* line 105, ../src/screen.sass */
 body#dashboard #content #users h2, body#dashboard #content #users h3 {
   margin: 0;
   padding: 0;
   line-height: 1;
   margin-bottom: 0.3em;
 }
-/* line 108, ../src/screen.sass */
+/* line 110, ../src/screen.sass */
 body#dashboard #content #users h2.num_users {
   font-weight: bold;
   color: #333333;
   text-shadow: black -1px -1px 1px;
 }
-/* line 112, ../src/screen.sass */
+/* line 114, ../src/screen.sass */
 body#dashboard #content #users h3 {
   font-size: 1.1em;
 }
-/* line 115, ../src/screen.sass */
+/* line 117, ../src/screen.sass */
 body#dashboard #content #users p {
   margin: 0;
   font-size: 0.7em;
   font-style: italic;
 }
-
 /* line 123, ../src/screen.sass */
+body#dashboard #content #rooms h3.title {
+  font-size: 1.7em;
+  margin: 0;
+  margin-bottom: 0.2em;
+  margin-right: 0.5em;
+  float: left;
+}
+/* line 129, ../src/screen.sass */
+body#dashboard #content #rooms p.description {
+  font-size: 0.7em;
+  padding-top: 0.9em;
+}
+
+/* line 137, ../src/screen.sass */
 body#home #header {
   text-align: center;
 }
-/* line 125, ../src/screen.sass */
+/* line 139, ../src/screen.sass */
 body#home #header h1 {
   font-size: 1.8em;
 }
-/* line 127, ../src/screen.sass */
+/* line 141, ../src/screen.sass */
 body#home #header h1 a {
   text-decoration: none;
   color: #333333;
@@ -675,16 +689,16 @@ body#home #header h1 a {
 body#home #header h1 a:hover {
   text-decoration: underline;
 }
-/* line 130, ../src/screen.sass */
+/* line 144, ../src/screen.sass */
 body#home #header .tagline {
   font-size: 2.9em;
   margin-bottom: 0.3em;
 }
-/* line 133, ../src/screen.sass */
+/* line 147, ../src/screen.sass */
 body#home #header .description {
   font-size: 1.2em;
 }
-/* line 136, ../src/screen.sass */
+/* line 150, ../src/screen.sass */
 body#home #content .left {
   display: inline;
   float: left;
@@ -695,7 +709,7 @@ body#home #content .left {
 * html body#home #content .left {
   overflow-x: hidden;
 }
-/* line 138, ../src/screen.sass */
+/* line 152, ../src/screen.sass */
 body#home #content .right {
   display: inline;
   float: left;
@@ -707,30 +721,30 @@ body#home #content .right {
 * html body#home #content .right {
   overflow-x: hidden;
 }
-/* line 142, ../src/screen.sass */
+/* line 156, ../src/screen.sass */
 body#home #content .right h3 {
   margin-left: 0.65em;
   margin-bottom: 0.85em;
 }
-/* line 145, ../src/screen.sass */
+/* line 159, ../src/screen.sass */
 body#home #content .right a.login {
   font-size: 1.2em;
 }
-/* line 148, ../src/screen.sass */
+/* line 162, ../src/screen.sass */
 body#home #content .right #info {
   margin-top: 1.4em;
 }
-/* line 150, ../src/screen.sass */
+/* line 164, ../src/screen.sass */
 body#home #content .right #info h4 {
   font-size: 0.8em;
   font-weight: bold;
   margin-bottom: 0.4em;
 }
-/* line 154, ../src/screen.sass */
+/* line 168, ../src/screen.sass */
 body#home #content .right #info p {
   font-size: 0.8em;
 }
-/* line 156, ../src/screen.sass */
+/* line 170, ../src/screen.sass */
 body#home #content #serverinfo {
   display: inline;
   float: left;
@@ -744,7 +758,7 @@ body#home #content #serverinfo {
 * html body#home #content #serverinfo {
   overflow-x: hidden;
 }
-/* line 161, ../src/screen.sass */
+/* line 175, ../src/screen.sass */
 body#home #content #serverinfo h4 {
   color: #555555;
   font-size: 1.5em;
