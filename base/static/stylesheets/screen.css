@@ -679,7 +679,7 @@ body#dashboard #content #rooms table tr.even td {
 /* line 142, ../src/screen.sass */
 body#dashboard #content #rooms table td {
   padding: 0;
-  padding: 0.4em 0.6em 0.5em 0.6em;
+  padding: 0.3em 0.6em 0.4em 0.6em;
 }
 /* line 146, ../src/screen.sass */
 body#dashboard #content #rooms table td.left {
@@ -694,9 +694,10 @@ body#dashboard #content #rooms table td.left h4, body#dashboard #content #rooms 
 /* line 152, ../src/screen.sass */
 body#dashboard #content #rooms table td.left h4 {
   font-weight: bold;
-  margin-bottom: 0.4em;
+  float: left;
+  margin-right: 0.5em;
 }
-/* line 155, ../src/screen.sass */
+/* line 157, ../src/screen.sass */
 body#dashboard #content #rooms table td.left h4 a {
   text-decoration: none;
 }
@@ -704,48 +705,48 @@ body#dashboard #content #rooms table td.left h4 a {
 body#dashboard #content #rooms table td.left h4 a:hover {
   text-decoration: underline;
 }
-/* line 157, ../src/screen.sass */
+/* line 159, ../src/screen.sass */
 body#dashboard #content #rooms table td.left p {
+  padding-top: 0.5em;
   font-size: 0.8em;
   color: #666666;
 }
-/* line 160, ../src/screen.sass */
+/* line 163, ../src/screen.sass */
 body#dashboard #content #rooms table td.right {
   padding-left: 0;
   padding-right: 0;
   width: 60px;
 }
-/* line 164, ../src/screen.sass */
+/* line 167, ../src/screen.sass */
 body#dashboard #content #rooms table td.right .num_users {
   text-align: center;
 }
-/* line 166, ../src/screen.sass */
+/* line 169, ../src/screen.sass */
 body#dashboard #content #rooms table td.right .num_users h4, body#dashboard #content #rooms table td.right .num_users p {
   margin: 0;
   padding: 0;
   line-height: 1;
 }
-/* line 170, ../src/screen.sass */
+/* line 173, ../src/screen.sass */
 body#dashboard #content #rooms table td.right .num_users h4 {
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: bold;
-  margin-bottom: 0.1em;
 }
-/* line 174, ../src/screen.sass */
+/* line 176, ../src/screen.sass */
 body#dashboard #content #rooms table td.right .num_users p {
-  font-size: 0.7em;
+  font-size: 0.6em;
   color: #666666;
 }
 
-/* line 183, ../src/screen.sass */
+/* line 185, ../src/screen.sass */
 body#home #header {
   text-align: center;
 }
-/* line 185, ../src/screen.sass */
+/* line 187, ../src/screen.sass */
 body#home #header h1 {
   font-size: 1.8em;
 }
-/* line 187, ../src/screen.sass */
+/* line 189, ../src/screen.sass */
 body#home #header h1 a {
   text-decoration: none;
   color: #333333;
@@ -754,16 +755,16 @@ body#home #header h1 a {
 body#home #header h1 a:hover {
   text-decoration: underline;
 }
-/* line 190, ../src/screen.sass */
+/* line 192, ../src/screen.sass */
 body#home #header .tagline {
   font-size: 2.9em;
   margin-bottom: 0.3em;
 }
-/* line 193, ../src/screen.sass */
+/* line 195, ../src/screen.sass */
 body#home #header .description {
   font-size: 1.2em;
 }
-/* line 196, ../src/screen.sass */
+/* line 198, ../src/screen.sass */
 body#home #content .left {
   display: inline;
   float: left;
@@ -774,7 +775,7 @@ body#home #content .left {
 * html body#home #content .left {
   overflow-x: hidden;
 }
-/* line 198, ../src/screen.sass */
+/* line 200, ../src/screen.sass */
 body#home #content .right {
   display: inline;
   float: left;
@@ -786,30 +787,30 @@ body#home #content .right {
 * html body#home #content .right {
   overflow-x: hidden;
 }
-/* line 202, ../src/screen.sass */
+/* line 204, ../src/screen.sass */
 body#home #content .right h3 {
   margin-left: 0.65em;
   margin-bottom: 0.85em;
 }
-/* line 205, ../src/screen.sass */
+/* line 207, ../src/screen.sass */
 body#home #content .right a.login {
   font-size: 1.2em;
 }
-/* line 208, ../src/screen.sass */
+/* line 210, ../src/screen.sass */
 body#home #content .right #info {
   margin-top: 1.4em;
 }
-/* line 210, ../src/screen.sass */
+/* line 212, ../src/screen.sass */
 body#home #content .right #info h4 {
   font-size: 0.8em;
   font-weight: bold;
   margin-bottom: 0.4em;
 }
-/* line 214, ../src/screen.sass */
+/* line 216, ../src/screen.sass */
 body#home #content .right #info p {
   font-size: 0.8em;
 }
-/* line 216, ../src/screen.sass */
+/* line 218, ../src/screen.sass */
 body#home #content #serverinfo {
   display: inline;
   float: left;
@@ -823,7 +824,7 @@ body#home #content #serverinfo {
 * html body#home #content #serverinfo {
   overflow-x: hidden;
 }
-/* line 221, ../src/screen.sass */
+/* line 223, ../src/screen.sass */
 body#home #content #serverinfo h4 {
   color: #555555;
   font-size: 1.5em;
