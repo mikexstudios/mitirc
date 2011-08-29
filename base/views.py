@@ -5,7 +5,7 @@ from django.conf import settings
 from annoying.decorators import render_to, ajax_request
 #from annoying.functions import get_object_or_None
 
-#from base import models
+from base import models
 
 import urllib
 
@@ -22,8 +22,9 @@ def home(request):
 @login_required
 @render_to('base/dashboard.html')
 def dashboard(request):
+    rooms = models.Room.objects.all().order_by('-num_users')    
 
-    return {}
+    return {'rooms': rooms}
 
 
 @login_required

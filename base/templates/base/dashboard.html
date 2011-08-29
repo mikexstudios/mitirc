@@ -19,54 +19,25 @@
 
     <table>
     <tbody>
-        <tr class="odd">
+        {% for r in rooms %}
+        <tr class="{% cycle 'odd' 'even' %}">
             <td class="left">
-                <h4 class="name"><a href="">#general</a></h4>
-                <p class="topic">Chat about anything you want!</p>
+                <h4 class="name"><a href="">{{ r.name }}</a></h4>
+                <p class="topic">{{ r.topic|default:'<em>No topic was set.</em>' }}</p>
             </td>
             <td class="right">
                 <div class="num_users">
-                    <h4>36</h4>
+                    <h4>{{ r.num_users }}</h4>
                     <p>users</p>
                 </div>
             </td>
         </tr>
-        <tr class="even">
-            <td class="left">
-                <h4 class="name"><a href="">#general</a></h4>
-                <p class="topic">Chat about anything you want!</p>
-            </td>
-            <td class="right">
-                <div class="num_users">
-                    <h4>36</h4>
-                    <p>users</p>
-                </div>
-            </td>
+        {% empty %}
+        <tr class="empty">
+            <td>No rooms have been created yet! Get started by 
+            <a href="">creating a new room &rarr;</a></td>
         </tr>
-        <tr class="odd">
-            <td class="left">
-                <h4 class="name"><a href="">#general</a></h4>
-                <p class="topic">Chat about anything you want!</p>
-            </td>
-            <td class="right">
-                <div class="num_users">
-                    <h4>36</h4>
-                    <p>users</p>
-                </div>
-            </td>
-        </tr>
-        <tr class="even">
-            <td class="left">
-                <h4 class="name"><a href="">#general</a></h4>
-                <p class="topic">Chat about anything you want!</p>
-            </td>
-            <td class="right">
-                <div class="num_users">
-                    <h4>36</h4>
-                    <p>users</p>
-                </div>
-            </td>
-        </tr>
+        {% endfor %}
     </tbody>
     </table>
 

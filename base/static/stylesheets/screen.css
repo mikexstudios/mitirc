@@ -670,32 +670,33 @@ body#dashboard #content #rooms h3.title {
 body#dashboard #content #rooms p.description {
   font-size: 0.7em;
   padding-top: 0.9em;
+  margin: 0;
 }
-/* line 136, ../src/screen.sass */
+/* line 137, ../src/screen.sass */
 body#dashboard #content #rooms table tr.even td {
   background-color: #eeeeee;
 }
-/* line 141, ../src/screen.sass */
+/* line 142, ../src/screen.sass */
 body#dashboard #content #rooms table td {
   padding: 0;
   padding: 0.4em 0.6em 0.5em 0.6em;
 }
-/* line 145, ../src/screen.sass */
+/* line 146, ../src/screen.sass */
 body#dashboard #content #rooms table td.left {
   border-right: 1px solid white;
 }
-/* line 147, ../src/screen.sass */
+/* line 148, ../src/screen.sass */
 body#dashboard #content #rooms table td.left h4, body#dashboard #content #rooms table td.left p {
   margin: 0;
   padding: 0;
   line-height: 1;
 }
-/* line 151, ../src/screen.sass */
+/* line 152, ../src/screen.sass */
 body#dashboard #content #rooms table td.left h4 {
   font-weight: bold;
   margin-bottom: 0.4em;
 }
-/* line 154, ../src/screen.sass */
+/* line 155, ../src/screen.sass */
 body#dashboard #content #rooms table td.left h4 a {
   text-decoration: none;
 }
@@ -703,48 +704,48 @@ body#dashboard #content #rooms table td.left h4 a {
 body#dashboard #content #rooms table td.left h4 a:hover {
   text-decoration: underline;
 }
-/* line 156, ../src/screen.sass */
+/* line 157, ../src/screen.sass */
 body#dashboard #content #rooms table td.left p {
   font-size: 0.8em;
   color: #666666;
 }
-/* line 159, ../src/screen.sass */
+/* line 160, ../src/screen.sass */
 body#dashboard #content #rooms table td.right {
   padding-left: 0;
   padding-right: 0;
   width: 60px;
 }
-/* line 163, ../src/screen.sass */
+/* line 164, ../src/screen.sass */
 body#dashboard #content #rooms table td.right .num_users {
   text-align: center;
 }
-/* line 165, ../src/screen.sass */
+/* line 166, ../src/screen.sass */
 body#dashboard #content #rooms table td.right .num_users h4, body#dashboard #content #rooms table td.right .num_users p {
   margin: 0;
   padding: 0;
   line-height: 1;
 }
-/* line 169, ../src/screen.sass */
+/* line 170, ../src/screen.sass */
 body#dashboard #content #rooms table td.right .num_users h4 {
   font-size: 1.3em;
   font-weight: bold;
   margin-bottom: 0.1em;
 }
-/* line 173, ../src/screen.sass */
+/* line 174, ../src/screen.sass */
 body#dashboard #content #rooms table td.right .num_users p {
   font-size: 0.7em;
   color: #666666;
 }
 
-/* line 182, ../src/screen.sass */
+/* line 183, ../src/screen.sass */
 body#home #header {
   text-align: center;
 }
-/* line 184, ../src/screen.sass */
+/* line 185, ../src/screen.sass */
 body#home #header h1 {
   font-size: 1.8em;
 }
-/* line 186, ../src/screen.sass */
+/* line 187, ../src/screen.sass */
 body#home #header h1 a {
   text-decoration: none;
   color: #333333;
@@ -753,16 +754,16 @@ body#home #header h1 a {
 body#home #header h1 a:hover {
   text-decoration: underline;
 }
-/* line 189, ../src/screen.sass */
+/* line 190, ../src/screen.sass */
 body#home #header .tagline {
   font-size: 2.9em;
   margin-bottom: 0.3em;
 }
-/* line 192, ../src/screen.sass */
+/* line 193, ../src/screen.sass */
 body#home #header .description {
   font-size: 1.2em;
 }
-/* line 195, ../src/screen.sass */
+/* line 196, ../src/screen.sass */
 body#home #content .left {
   display: inline;
   float: left;
@@ -773,7 +774,7 @@ body#home #content .left {
 * html body#home #content .left {
   overflow-x: hidden;
 }
-/* line 197, ../src/screen.sass */
+/* line 198, ../src/screen.sass */
 body#home #content .right {
   display: inline;
   float: left;
@@ -785,30 +786,30 @@ body#home #content .right {
 * html body#home #content .right {
   overflow-x: hidden;
 }
-/* line 201, ../src/screen.sass */
+/* line 202, ../src/screen.sass */
 body#home #content .right h3 {
   margin-left: 0.65em;
   margin-bottom: 0.85em;
 }
-/* line 204, ../src/screen.sass */
+/* line 205, ../src/screen.sass */
 body#home #content .right a.login {
   font-size: 1.2em;
 }
-/* line 207, ../src/screen.sass */
+/* line 208, ../src/screen.sass */
 body#home #content .right #info {
   margin-top: 1.4em;
 }
-/* line 209, ../src/screen.sass */
+/* line 210, ../src/screen.sass */
 body#home #content .right #info h4 {
   font-size: 0.8em;
   font-weight: bold;
   margin-bottom: 0.4em;
 }
-/* line 213, ../src/screen.sass */
+/* line 214, ../src/screen.sass */
 body#home #content .right #info p {
   font-size: 0.8em;
 }
-/* line 215, ../src/screen.sass */
+/* line 216, ../src/screen.sass */
 body#home #content #serverinfo {
   display: inline;
   float: left;
@@ -822,7 +823,7 @@ body#home #content #serverinfo {
 * html body#home #content #serverinfo {
   overflow-x: hidden;
 }
-/* line 220, ../src/screen.sass */
+/* line 221, ../src/screen.sass */
 body#home #content #serverinfo h4 {
   color: #555555;
   font-size: 1.5em;
