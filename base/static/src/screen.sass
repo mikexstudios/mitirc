@@ -87,9 +87,10 @@ body#dashboard
           color: $font-color
 
   #content
-    .left
+    //> means target only immediate children
+    > .left
       +column($blueprint-grid-columns * 1/4)
-    .right
+    > .right
       //Add left margin using prepend.
       +prepend(1) 
       +column($blueprint-grid-columns * 3/4 - 1, true)
@@ -129,6 +130,50 @@ body#dashboard
       p.description
         font-size: 0.7em
         padding-top: 0.9em
+
+      table
+        tr.even
+          td
+            background-color: #eee
+        //tr.even
+        //  td
+        //    background-color: transparent
+        td
+          padding: 0
+          //bottom-padding should be slightly more than top to balance out space
+          padding: 0.4em 0.6em 0.5em 0.6em
+        td.left
+          border-right: 1px solid #fff
+          h4, p
+            margin: 0
+            padding: 0
+            line-height: 1
+          h4
+            font-weight: bold
+            margin-bottom: 0.4em
+            a
+              +hover-link
+          p
+            font-size: 0.8em
+            color: $quiet-color
+        td.right
+          padding-left: 0
+          padding-right: 0
+          width: 60px
+          .num_users
+            text-align: center
+            h4, p
+              margin: 0
+              padding: 0
+              line-height: 1
+            h4
+              font-size: 1.3em
+              font-weight: bold
+              margin-bottom: 0.1em
+            p
+              font-size: 0.7em
+              color: $quiet-color
+        
 
 
 

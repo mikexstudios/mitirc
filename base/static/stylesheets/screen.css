@@ -598,19 +598,19 @@ body#dashboard #header ul#navigation li a {
 body#dashboard #header ul#navigation li a:hover {
   text-decoration: underline;
 }
-/* line 90, ../src/screen.sass */
-body#dashboard #content .left {
+/* line 91, ../src/screen.sass */
+body#dashboard #content > .left {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 192.5px;
 }
 /* line 147, ../../../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body#dashboard #content .left {
+* html body#dashboard #content > .left {
   overflow-x: hidden;
 }
-/* line 92, ../src/screen.sass */
-body#dashboard #content .right {
+/* line 93, ../src/screen.sass */
+body#dashboard #content > .right {
   padding-left: 33.75px;
   display: inline;
   float: left;
@@ -618,10 +618,10 @@ body#dashboard #content .right {
   width: 563.75px;
 }
 /* line 147, ../../../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body#dashboard #content .right {
+* html body#dashboard #content > .right {
   overflow-x: hidden;
 }
-/* line 97, ../src/screen.sass */
+/* line 98, ../src/screen.sass */
 body#dashboard #content #users {
   border: 1px solid #cccccc;
   background-color: #eeeeee;
@@ -635,30 +635,30 @@ body#dashboard #content #users {
   padding-top: 0.2em;
   padding-bottom: 0.6em;
 }
-/* line 105, ../src/screen.sass */
+/* line 106, ../src/screen.sass */
 body#dashboard #content #users h2, body#dashboard #content #users h3 {
   margin: 0;
   padding: 0;
   line-height: 1;
   margin-bottom: 0.3em;
 }
-/* line 110, ../src/screen.sass */
+/* line 111, ../src/screen.sass */
 body#dashboard #content #users h2.num_users {
   font-weight: bold;
   color: #333333;
   text-shadow: black -1px -1px 1px;
 }
-/* line 114, ../src/screen.sass */
+/* line 115, ../src/screen.sass */
 body#dashboard #content #users h3 {
   font-size: 1.1em;
 }
-/* line 117, ../src/screen.sass */
+/* line 118, ../src/screen.sass */
 body#dashboard #content #users p {
   margin: 0;
   font-size: 0.7em;
   font-style: italic;
 }
-/* line 123, ../src/screen.sass */
+/* line 124, ../src/screen.sass */
 body#dashboard #content #rooms h3.title {
   font-size: 1.7em;
   margin: 0;
@@ -666,21 +666,85 @@ body#dashboard #content #rooms h3.title {
   margin-right: 0.5em;
   float: left;
 }
-/* line 129, ../src/screen.sass */
+/* line 130, ../src/screen.sass */
 body#dashboard #content #rooms p.description {
   font-size: 0.7em;
   padding-top: 0.9em;
 }
+/* line 136, ../src/screen.sass */
+body#dashboard #content #rooms table tr.even td {
+  background-color: #eeeeee;
+}
+/* line 141, ../src/screen.sass */
+body#dashboard #content #rooms table td {
+  padding: 0;
+  padding: 0.4em 0.6em 0.5em 0.6em;
+}
+/* line 145, ../src/screen.sass */
+body#dashboard #content #rooms table td.left {
+  border-right: 1px solid white;
+}
+/* line 147, ../src/screen.sass */
+body#dashboard #content #rooms table td.left h4, body#dashboard #content #rooms table td.left p {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+/* line 151, ../src/screen.sass */
+body#dashboard #content #rooms table td.left h4 {
+  font-weight: bold;
+  margin-bottom: 0.4em;
+}
+/* line 154, ../src/screen.sass */
+body#dashboard #content #rooms table td.left h4 a {
+  text-decoration: none;
+}
+/* line 4, ../../../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+body#dashboard #content #rooms table td.left h4 a:hover {
+  text-decoration: underline;
+}
+/* line 156, ../src/screen.sass */
+body#dashboard #content #rooms table td.left p {
+  font-size: 0.8em;
+  color: #666666;
+}
+/* line 159, ../src/screen.sass */
+body#dashboard #content #rooms table td.right {
+  padding-left: 0;
+  padding-right: 0;
+  width: 60px;
+}
+/* line 163, ../src/screen.sass */
+body#dashboard #content #rooms table td.right .num_users {
+  text-align: center;
+}
+/* line 165, ../src/screen.sass */
+body#dashboard #content #rooms table td.right .num_users h4, body#dashboard #content #rooms table td.right .num_users p {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+/* line 169, ../src/screen.sass */
+body#dashboard #content #rooms table td.right .num_users h4 {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 0.1em;
+}
+/* line 173, ../src/screen.sass */
+body#dashboard #content #rooms table td.right .num_users p {
+  font-size: 0.7em;
+  color: #666666;
+}
 
-/* line 137, ../src/screen.sass */
+/* line 182, ../src/screen.sass */
 body#home #header {
   text-align: center;
 }
-/* line 139, ../src/screen.sass */
+/* line 184, ../src/screen.sass */
 body#home #header h1 {
   font-size: 1.8em;
 }
-/* line 141, ../src/screen.sass */
+/* line 186, ../src/screen.sass */
 body#home #header h1 a {
   text-decoration: none;
   color: #333333;
@@ -689,16 +753,16 @@ body#home #header h1 a {
 body#home #header h1 a:hover {
   text-decoration: underline;
 }
-/* line 144, ../src/screen.sass */
+/* line 189, ../src/screen.sass */
 body#home #header .tagline {
   font-size: 2.9em;
   margin-bottom: 0.3em;
 }
-/* line 147, ../src/screen.sass */
+/* line 192, ../src/screen.sass */
 body#home #header .description {
   font-size: 1.2em;
 }
-/* line 150, ../src/screen.sass */
+/* line 195, ../src/screen.sass */
 body#home #content .left {
   display: inline;
   float: left;
@@ -709,7 +773,7 @@ body#home #content .left {
 * html body#home #content .left {
   overflow-x: hidden;
 }
-/* line 152, ../src/screen.sass */
+/* line 197, ../src/screen.sass */
 body#home #content .right {
   display: inline;
   float: left;
@@ -721,30 +785,30 @@ body#home #content .right {
 * html body#home #content .right {
   overflow-x: hidden;
 }
-/* line 156, ../src/screen.sass */
+/* line 201, ../src/screen.sass */
 body#home #content .right h3 {
   margin-left: 0.65em;
   margin-bottom: 0.85em;
 }
-/* line 159, ../src/screen.sass */
+/* line 204, ../src/screen.sass */
 body#home #content .right a.login {
   font-size: 1.2em;
 }
-/* line 162, ../src/screen.sass */
+/* line 207, ../src/screen.sass */
 body#home #content .right #info {
   margin-top: 1.4em;
 }
-/* line 164, ../src/screen.sass */
+/* line 209, ../src/screen.sass */
 body#home #content .right #info h4 {
   font-size: 0.8em;
   font-weight: bold;
   margin-bottom: 0.4em;
 }
-/* line 168, ../src/screen.sass */
+/* line 213, ../src/screen.sass */
 body#home #content .right #info p {
   font-size: 0.8em;
 }
-/* line 170, ../src/screen.sass */
+/* line 215, ../src/screen.sass */
 body#home #content #serverinfo {
   display: inline;
   float: left;
@@ -758,7 +822,7 @@ body#home #content #serverinfo {
 * html body#home #content #serverinfo {
   overflow-x: hidden;
 }
-/* line 175, ../src/screen.sass */
+/* line 220, ../src/screen.sass */
 body#home #content #serverinfo h4 {
   color: #555555;
   font-size: 1.5em;
