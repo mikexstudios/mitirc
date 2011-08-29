@@ -535,32 +535,107 @@ body.base a.button:hover {
   text-shadow: none;
 }
 
-/* line 69, ../src/screen.sass */
+/* line 68, ../src/screen.sass */
+body#dashboard #header {
+  border-bottom: 3px double #cccccc;
+}
+/* line 70, ../src/screen.sass */
+body#dashboard #header h1 {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 158.75px;
+  font-size: 1.6em;
+}
+/* line 138, ../../../../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body#dashboard #header h1 {
+  overflow-x: hidden;
+}
+/* line 73, ../src/screen.sass */
+body#dashboard #header h1 a {
+  text-decoration: none;
+  color: #333333;
+}
+/* line 4, ../../../../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_hover-link.scss */
+body#dashboard #header h1 a:hover {
+  text-decoration: underline;
+}
+/* line 76, ../src/screen.sass */
+body#dashboard #header ul#navigation {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 631.25px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  *zoom: 1;
+  text-align: right;
+}
+/* line 138, ../../../../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body#dashboard #header ul#navigation {
+  overflow-x: hidden;
+}
+/* line 46, ../../../../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_inline-block-list.scss */
+body#dashboard #header ul#navigation li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  white-space: nowrap;
+}
+/* line 7, ../../../../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+body#dashboard #header ul#navigation li {
+  *display: inline;
+}
+/* line 80, ../src/screen.sass */
+body#dashboard #header ul#navigation li {
+  margin-left: 1em;
+  font-size: 0.9em;
+}
+/* line 84, ../src/screen.sass */
+body#dashboard #header ul#navigation li a {
+  text-decoration: none;
+  color: #333333;
+}
+/* line 4, ../../../../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_hover-link.scss */
+body#dashboard #header ul#navigation li a:hover {
+  text-decoration: underline;
+}
+
+/* line 92, ../src/screen.sass */
 body#home #header {
   text-align: center;
 }
-/* line 71, ../src/screen.sass */
+/* line 94, ../src/screen.sass */
 body#home #header h1 {
   font-size: 1.8em;
 }
-/* line 73, ../src/screen.sass */
+/* line 96, ../src/screen.sass */
 body#home #header h1 a {
   text-decoration: none;
+  color: #333333;
 }
 /* line 4, ../../../../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_hover-link.scss */
 body#home #header h1 a:hover {
   text-decoration: underline;
 }
-/* line 75, ../src/screen.sass */
+/* line 99, ../src/screen.sass */
 body#home #header .tagline {
   font-size: 2.9em;
   margin-bottom: 0.3em;
 }
-/* line 78, ../src/screen.sass */
+/* line 102, ../src/screen.sass */
 body#home #header .description {
   font-size: 1.2em;
 }
-/* line 81, ../src/screen.sass */
+/* line 105, ../src/screen.sass */
 body#home #content .left {
   display: inline;
   float: left;
@@ -571,7 +646,7 @@ body#home #content .left {
 * html body#home #content .left {
   overflow-x: hidden;
 }
-/* line 83, ../src/screen.sass */
+/* line 107, ../src/screen.sass */
 body#home #content .right {
   display: inline;
   float: left;
@@ -583,30 +658,30 @@ body#home #content .right {
 * html body#home #content .right {
   overflow-x: hidden;
 }
-/* line 87, ../src/screen.sass */
+/* line 111, ../src/screen.sass */
 body#home #content .right h3 {
   margin-left: 0.65em;
   margin-bottom: 0.85em;
 }
-/* line 90, ../src/screen.sass */
+/* line 114, ../src/screen.sass */
 body#home #content .right a.login {
   font-size: 1.2em;
 }
-/* line 93, ../src/screen.sass */
+/* line 117, ../src/screen.sass */
 body#home #content .right #info {
   margin-top: 1.4em;
 }
-/* line 95, ../src/screen.sass */
+/* line 119, ../src/screen.sass */
 body#home #content .right #info h4 {
   font-size: 0.8em;
   font-weight: bold;
   margin-bottom: 0.4em;
 }
-/* line 99, ../src/screen.sass */
+/* line 123, ../src/screen.sass */
 body#home #content .right #info p {
   font-size: 0.8em;
 }
-/* line 101, ../src/screen.sass */
+/* line 125, ../src/screen.sass */
 body#home #content #serverinfo {
   display: inline;
   float: left;
@@ -620,7 +695,7 @@ body#home #content #serverinfo {
 * html body#home #content #serverinfo {
   overflow-x: hidden;
 }
-/* line 106, ../src/screen.sass */
+/* line 130, ../src/screen.sass */
 body#home #content #serverinfo h4 {
   color: #555555;
   font-size: 1.5em;
