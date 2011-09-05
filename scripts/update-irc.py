@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #Scaffolding to setup standalone django script
 import os, sys
 sys.path[0] = os.path.normpath(os.path.join(sys.path[0], '..'))
