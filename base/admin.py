@@ -16,3 +16,8 @@ class StatisticAdmin(admin.ModelAdmin):
     list_display = ('key', 'value', )
     list_display_links = ('key', )
 admin.site.register(models.Statistic, StatisticAdmin)
+
+class OperAdmin(admin.ModelAdmin):
+    list_display = ('username', 'password', 'hostname', 'type')
+    list_display_links = ('username', )
+admin.site.register(models.Oper, OperAdmin)

@@ -61,5 +61,27 @@ class Statistic(models.Model):
     def __unicode__(self):
         return '%s: %s' % (self.key, self.value)
 
+
+class Oper(models.Model):
+    '''
+    Sets up the schema used by the sqloper module from inspIRCd. 
+    See: http://wiki.inspircd.org/Modules/sqloper
+    '''
+    class Meta:
+        db_table = 'ircd_opers'
+
+    #id is automatically created and auto-incremented.
+    username = models.CharField(max_length = 31, unique = True)
+    password = models.CharField(max_length = 32) #allow possibility for md5 or sha
+    #hostname should be in 'glob' format (e.g. *@*).
+    hostname = models.CharField(max_length = 255, default = '*@*')
+    #Defines the admin class of the op: NetAdmin, GlobalOp, or Helper. These
+    #classes are defined in config/opers.conf file in InspIRCd.
+    type = models.CharField(max_length = 20, default = 'GlobalOp')
+
+    def __unicode__(self):
+        return '%s: %s' % (self.username, self.type)
+
+
 # We handle signals in handlers.py. Make sure they are registered by importing:
 import handlers
