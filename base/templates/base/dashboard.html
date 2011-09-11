@@ -40,14 +40,14 @@
         </tr>
         {% empty %}
         <tr class="empty">
-            <td>No rooms have been created yet! Get started by 
-            <a href="">creating a new room &rarr;</a></td>
+            <td>No rooms have been created yet, but now that you're here, maybe
+            you can create one...</td>
         </tr>
         {% endfor %}
         <tr id="newroom">
             <td colspan="2">
                 <form action="{% url chat %}" method="GET">
-                Or, create a new room: <input type="text" name="channels" placeholder="e.g. #myroom" />
+                Create a new room: <input type="text" name="channels" placeholder="e.g. #myroom" />
                 <button class="button primary big">Go!</button>
                 </form>
                 <!-- <small><em>Tip</em>: Type <code>/topic My topic here</code> to set the topic of your new room!</small> -->
