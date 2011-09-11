@@ -30,8 +30,12 @@ def dashboard(request):
              updated__gte = datetime.datetime.now() - \
              datetime.timedelta(minutes = getattr(settings, 'ROOM_AGE_FILTER', 10))
             ).order_by('-num_users')
-    total_users = models.Statistic.objects.get(key = 'total_users').value
-    max_users = models.Statistic.objects.get(key = 'max_users').value
+    try:
+        total_users = models.Statistic.objects.get(key = 'total_users').value
+        max_users = models.Statistic.objects.get(key = 'max_users').value
+    except models.Statistic.DoesNotExist:
+        total_users = 0
+        max_users = 0
 
     return {'rooms': rooms, 'total_users': total_users, 'max_users': max_users}
 
