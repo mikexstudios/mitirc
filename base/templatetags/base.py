@@ -8,10 +8,11 @@ import urllib
 register = template.Library()
 
 @register.simple_tag(takes_context = True)
-def webchat_url(context, channel = getattr(settings, 'DEFAULT_ROOM', '#general')):
+def webchat_url(context, channel = None):
     '''
     Given a channel string (eg. '#general'), returns a url to webchat that auto-
-    matically joins that channel.
+    matically joins that channel. If no channel string is provided, then
+    returns the webchat_url without a channel.
     '''
     request = context['request']
 
@@ -23,10 +24,12 @@ def webchat_url(context, channel = getattr(settings, 'DEFAULT_ROOM', '#general')
     ia = request.user.ircauth
 
     #Now add user-specific connection parameters on the url
-    webchat_url += '?%s' % urllib.urlencode({
+    params = {
         'nick': request.user.username,
-        'channels': channel,
         'key': ia.password,
-    })
+    }
+    if channel:
+        params['channels'] = channel
+    webchat_url += '?%s' % urllib.urlencode(params)
 
     return webchat_url
