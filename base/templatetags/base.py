@@ -33,3 +33,12 @@ def webchat_url(context, channel = None):
     webchat_url += '?%s' % urllib.urlencode(params)
 
     return webchat_url
+
+@register.filter
+@stringfilter
+def urlquote(val):
+    '''
+    Given a string, returns it quoted through urllib.
+    '''
+    
+    return urllib.quote_plus(val)

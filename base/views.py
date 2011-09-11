@@ -31,7 +31,7 @@ def dashboard(request):
 
 @login_required
 #@render_to('base/chat.html')
-def chat(request):
+def chat(request, channel = None):
     #NOTE: Using get_host() also pulls in the port number. So if a non-80
     #port is used, break it apart into just the server name.
     webchat_url = getattr(settings, 'WEBCHAT_URL', 
@@ -43,7 +43,7 @@ def chat(request):
     #Now add user-specific connection parameters on the url
     webchat_url += '?%s' % urllib.urlencode({
         'nick': request.user.username,
-        'channels': getattr(settings, 'DEFAULT_ROOM', '#general'),
+        'channels': channel or getattr(settings, 'DEFAULT_ROOM', '#general'),
         'key': ia.password,
     })
 

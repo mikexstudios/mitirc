@@ -28,7 +28,7 @@
         {% for r in rooms %}
         <tr class="{% cycle 'odd' 'even' %}">
             <td class="left">
-                <h4 class="name"><a href="{% webchat_url r.name %}">{{ r.name }}</a></h4>
+                <h4 class="name"><a href="{% url chat r.name|urlquote %}">{{ r.name }}</a></h4>
                 <p class="topic">{{ r.topic|default:'<em>No topic was set.</em>' }}</p>
             </td>
             <td class="right">
@@ -46,7 +46,7 @@
         {% endfor %}
         <tr id="newroom">
             <td colspan="2">
-                <form action="{% webchat_url %}" method="GET">
+                <form action="{% url chat %}" method="GET">
                 Or, create a new room: <input type="text" name="channels" placeholder="e.g. #myroom" />
                 <button class="button primary big">Go!</button>
                 </form>
