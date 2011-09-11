@@ -7,6 +7,7 @@ import urllib
 
 register = template.Library()
 
+#NOTE: This tag is currently not used. Marked for deletion.
 @register.simple_tag(takes_context = True)
 def webchat_url(context, channel = None):
     '''
