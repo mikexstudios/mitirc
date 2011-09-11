@@ -18,7 +18,7 @@ Django >= 1.3
 django-annoying
 
 #For easy database migrations!
-#South
+South
 
 #For interacting with a CAS provider for single sign ons with MIT certs.
 -e git://github.com/mikexstudios/django-cas-consumer.git#egg=django-cas-consumer
