@@ -1,0 +1,53 @@
+[
+  {
+    "pk": "#general", 
+    "model": "base.room", 
+    "fields": {
+      "num_users": 0, 
+      "topic": "Talk about anything!", 
+      "always_display": true, 
+      "updated": "2011-09-11 16:42:35"
+    }
+  }, 
+  {
+    "pk": "#help", 
+    "model": "base.room", 
+    "fields": {
+      "num_users": 0, 
+      "topic": "Ask questions and get help", 
+      "always_display": true, 
+      "updated": "2011-09-11 16:43:12"
+    }
+  }, 
+  {
+    "pk": "#sipb", 
+    "model": "base.room", 
+    "fields": {
+      "num_users": 0, 
+      "topic": "Student Information Processing Board hangout", 
+      "always_display": true, 
+      "updated": "2011-09-11 16:43:12"
+    }
+  }, 
+  {
+    "pk": "total_channels", 
+    "model": "base.statistic", 
+    "fields": {
+      "value": 2
+    }
+  }, 
+  {
+    "pk": "total_users", 
+    "model": "base.statistic", 
+    "fields": {
+      "value": 0
+    }
+  }, 
+  {
+    "pk": "max_users", 
+    "model": "base.statistic", 
+    "fields": {
+      "value": 0
+    }
+  }
+]
