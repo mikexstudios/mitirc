@@ -50,9 +50,9 @@
         {% if user.is_authenticated %}
         <li><a href="">Dashboard</a></li>
         <li><a href="">Account</a></li>
-        <li><a href="" class="logout">Logout</a></li>
+        <li><a href="{% url cas_logout %}" class="logout">Logout</a></li>
         {% else %}
-        <li><a href="" class="login">Login</a></li>
+        <li><a href="{% url cas_login %}" class="login">Login</a></li>
         {% endif %}
     </ul>
 {% endblock %}
