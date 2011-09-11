@@ -4,6 +4,11 @@
 
 {% block title %}Dashboard{% endblock %}
 
+{% block javascript %}
+{# Use modernizer to hack support for my use of input text placeholder #}
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+{% endblock %}
+
 {% block content %}
 <div class="left">
   <div id="users">
@@ -39,6 +44,14 @@
             <a href="">creating a new room &rarr;</a></td>
         </tr>
         {% endfor %}
+        <tr id="newroom">
+            <td colspan="2">
+                <form action="{% webchat_url %}" method="GET">
+                Or, create a new room: <input type="text" name="channels" placeholder="e.g. #myroom" />
+                <button class="button primary big">Go!</button>
+                </form>
+            </td>
+        </tr>
     </tbody>
     </table>
 
