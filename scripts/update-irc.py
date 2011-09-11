@@ -12,11 +12,12 @@ from base import models
 import irclib
 import time #for sleep
 import re
-
+import random #for randint
 
 irc = irclib.IRC()
 try:
-    c = irc.server().connect('mxh.xvm.mit.edu', 6667, 'guest-task')
+    c = irc.server().connect('mxh.xvm.mit.edu', 6667, 
+        'guest-task-%s' % random.randint(1, 10000)) #random to prevent collisions
 except irclib.ServerConnectionError, x:
     print x
     sys.exit(1)
@@ -28,6 +29,7 @@ def on_connect(connection, event):
     #issues the output of the /LUSERS command.
 
 def on_disconnect(connection, event):
+    print 'Disconnected!'
     sys.exit(0)
 
 
