@@ -8,6 +8,7 @@ from annoying.decorators import render_to, ajax_request
 from base import models
 
 import urllib
+import datetime
 
 @render_to('base/home.html')
 def home(request):
@@ -22,7 +23,13 @@ def home(request):
 @login_required
 @render_to('base/dashboard.html')
 def dashboard(request):
-    rooms = models.Room.objects.all().order_by('-num_users')
+    #Get all rooms that have been updated greater or equal to t minutes ago.
+    #By using a filter, we don't have to garbage collect stale rooms in the data-
+    #base.
+    rooms = models.Room.objects.filter(
+             updated__gte = datetime.datetime.now() - \
+             datetime.timedelta(minutes = getattr(settings, 'ROOM_AGE_FILTER', 10))
+            ).order_by('-num_users')
     total_users = models.Statistic.objects.get(key = 'total_users').value
     max_users = models.Statistic.objects.get(key = 'max_users').value
 

@@ -188,6 +188,9 @@ LOGIN_REDIRECT_URL = '/dashboard/' #default: '/accounts/profile/'
 
 #WEBCHAT_URL = 'http://localhost:9090/'
 DEFAULT_ROOM = '#general'
+#The room age filter defines the cutoff for if a room is displayed on dashboard
+#if it hasn't been updated in t minutes. Default is 10 minutes.
+ROOM_AGE_FILTER = 10 #minutes
 
 IRC_SERVER = 'yourserver'
 IRC_SERVER_PORT = 6667
