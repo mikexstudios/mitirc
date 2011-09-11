@@ -8,7 +8,7 @@ class IRCAuthAdmin(admin.ModelAdmin):
 admin.site.register(models.IRCAuth, IRCAuthAdmin)
 
 class RoomAdmin(admin.ModelAdmin):
-    list_display = ('name', 'num_users', 'topic', 'updated')
+    list_display = ('name', 'num_users', 'topic', 'always_display', 'updated')
     list_display_links = ('name', )
 admin.site.register(models.Room, RoomAdmin)
 

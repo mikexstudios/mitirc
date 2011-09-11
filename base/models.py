@@ -36,6 +36,11 @@ class Room(models.Model):
     #The maximum topic length varies by IRCd, but InspIRCd has maximum length
     #of 308. 
     topic = models.CharField(max_length = 310, default = '', blank = True)
+    #If always_display is set to True, then the room will always be listed in
+    #dashboard even if it does not exist on the IRC server. This is useful for
+    #constantly used rooms and acts as a failsafe if the room polling script
+    #fails.
+    always_display = models.BooleanField(default = False)
     #We use the updated field to filter out old rooms that are probably empty
     #(since they haven't been updated by the room listing bot).
     updated = models.DateTimeField(auto_now = True)
