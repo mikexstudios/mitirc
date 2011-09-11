@@ -43,7 +43,10 @@ def chat(request, channel = None):
     #Now add user-specific connection parameters on the url
     webchat_url += '?%s' % urllib.urlencode({
         'nick': request.user.username,
-        'channels': channel or getattr(settings, 'DEFAULT_ROOM', '#general'),
+        #NOTE: We set the channel GET param to highest precedence followed by 
+        #      channel encoded in the url. The GET param is submitted by new
+        #      room creation form.
+        'channels': request.GET.get('channels', None) or channel or getattr(settings, 'DEFAULT_ROOM', '#general'),
         'key': ia.password,
     })
 
