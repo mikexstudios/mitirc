@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect
 from django.conf import settings
+from django.db.models import Q
 
 from annoying.decorators import render_to, ajax_request
 #from annoying.functions import get_object_or_None
@@ -27,8 +28,8 @@ def dashboard(request):
     #By using a filter, we don't have to garbage collect stale rooms in the data-
     #base.
     rooms = models.Room.objects.filter(
-             updated__gte = datetime.datetime.now() - \
-             datetime.timedelta(minutes = getattr(settings, 'ROOM_AGE_FILTER', 10))
+             Q(always_display = True) | Q(updated__gte = datetime.datetime.now() -\
+             datetime.timedelta(minutes = getattr(settings, 'ROOM_AGE_FILTER', 10)))
             ).order_by('-num_users')
     try:
         total_users = models.Statistic.objects.get(key = 'total_users').value
