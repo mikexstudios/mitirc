@@ -180,7 +180,7 @@ LOGGING = {
     }
 }
 
-LOGIN_REDIRECT_URL = '/chat/' #default: '/accounts/profile/'
+LOGIN_REDIRECT_URL = '/dashboard/' #default: '/accounts/profile/'
 
 ###################
 # base app settings
