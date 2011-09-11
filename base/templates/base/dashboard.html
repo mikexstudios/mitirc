@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load base %}
 {% block bodyid %}dashboard{% endblock %}
 
 {% block title %}Dashboard{% endblock %}
@@ -22,7 +23,7 @@
         {% for r in rooms %}
         <tr class="{% cycle 'odd' 'even' %}">
             <td class="left">
-                <h4 class="name"><a href="">{{ r.name }}</a></h4>
+                <h4 class="name"><a href="{% webchat_url r.name %}">{{ r.name }}</a></h4>
                 <p class="topic">{{ r.topic|default:'<em>No topic was set.</em>' }}</p>
             </td>
             <td class="right">
