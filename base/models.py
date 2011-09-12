@@ -92,9 +92,11 @@ class Oper(models.Model):
     class Meta:
         db_table = 'ircd_opers'
 
-    #id is automatically created and auto-incremented.
-    username = models.CharField(max_length = 31, unique = True)
-    password = models.CharField(max_length = 32) #allow possibility for md5 or sha
+    #id is automatically created and auto-incremented. 
+    #Don't let user edit username in admin.
+    username = models.CharField(max_length = 31, unique = True, editable = False)
+    #allow possibility for md5 or sha. Disable editing in admin.
+    password = models.CharField(max_length = 32, editable = False)
     #hostname should be in 'glob' format (e.g. *@*).
     hostname = models.CharField(max_length = 255, default = '*@*')
     #Defines the admin class of the op: NetAdmin, GlobalOp, or Helper. These
