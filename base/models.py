@@ -13,6 +13,7 @@ class IRCAuth(models.Model):
     user = models.OneToOneField(User, primary_key = True)
     username = models.CharField(max_length = 31, db_index = True, unique = True)
     password = models.CharField(max_length = 8) 
+    is_oper = models.BooleanField(default = False)
     updated = models.DateTimeField(auto_now = True)
 
     def generate_password(self):
@@ -21,6 +22,27 @@ class IRCAuth(models.Model):
         '''
         self.password = ''.join(SystemRandom().sample(string.ascii_lowercase + \
                                 string.digits, 8)) #match password model length!
+        self.sync_to_oper()
+
+    def sync_to_oper(self):
+        '''
+        If user is oper, then need to check if Oper model is associated with
+        the username and also check that the passwords are synced.
+        '''
+        if self.is_oper:
+            o, is_created = Oper.objects.get_or_create(username = self.username, 
+                             defaults = {'password': self.password})
+            #If object exists but is not synced, then resync the password
+            if o.password != self.password:
+                o.password = self.password
+                o.save()
+
+    def save(self, *args, **kwargs):
+        self.sync_to_oper()
+        super(IRCAuth, self).save(*args, **kwargs)
+
+    def __unicode__(self):
+        return '%s' % (self.username, )
 
 
 class Room(models.Model):
