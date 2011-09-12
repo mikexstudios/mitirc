@@ -7,6 +7,7 @@ from annoying.decorators import render_to, ajax_request
 #from annoying.functions import get_object_or_None
 
 from base import models
+from base import helpers
 
 import urllib
 import datetime
@@ -50,7 +51,11 @@ def chat(request, channel = None):
             'http://%s:%s/' % (request.get_host().split(':')[0], 9090))
 
     #Get user's IRC authentication information
-    ia = request.user.ircauth
+    try:
+        ia = request.user.ircauth
+    except models.IRCAuth.DoesNotExist:
+        helpers.create_ircauth_for_user(request.user)
+        ia = request.user.ircauth
 
     #Now add user-specific connection parameters on the url
     webchat_url += '?%s' % urllib.urlencode({
